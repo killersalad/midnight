@@ -76,7 +76,9 @@ pref("security.crash_tracking.js_load_1.maxCrashes", 1);
 
 pref("general.useragent.compatMode.firefox", false);
 
-pref("general.config.obscure_value", 13); // for MCD .cfg files
+// Tells Firefox to use my config.js file
+pref("general.config.filename", "config.js");
+pref("general.config.obscure_value", 0); // for MCD .cfg files
 
 #ifndef MOZ_BUILD_APP_IS_BROWSER
 pref("general.warnOnAboutConfig", true);
@@ -4184,6 +4186,7 @@ pref("extensions.webcompat.useScriptingAPI", true);
 pref("privacy.fingerprintingProtection.WebCompatService.logLevel", "Error");
 // To test strip on share site specific parameters by enabling a different list to be used
 pref("privacy.query_stripping.strip_on_share.enableTestMode", false);
+
 
 #if defined(MOZ_BACKGROUNDTASKS) && defined(ENABLE_TESTS)
   // Test prefs to verify background tasks inheret and override gecko prefs
